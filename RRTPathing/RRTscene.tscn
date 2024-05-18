@@ -1,0 +1,212 @@
+[gd_scene load_steps=6 format=3 uid="uid://hjygk7aa3uf4"]
+
+[ext_resource type="Script" path="res://RRTSTAR.gd" id="1_r0034"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gulpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dchpq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xf54w"]
+size = Vector2(40, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0150l"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="TreeCreator" type="Node2D" parent="."]
+
+[node name="MovingNode" type="Node2D" parent="."]
+position = Vector2(213, 0)
+
+[node name="Collider" type="Area2D" parent="MovingNode"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingNode/Collider"]
+shape = SubResource("CircleShape2D_gulpr")
+debug_color = Color(0, 0.54902, 0.921569, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Bounds" type="Node2D" parent="Environment"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="BoundsWall" type="Area2D" parent="Environment/Bounds"]
+position = Vector2(0, 200)
+scale = Vector2(40, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Bounds/BoundsWall"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BoundsWall2" type="Area2D" parent="Environment/Bounds"]
+position = Vector2(0, -200)
+scale = Vector2(40, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Bounds/BoundsWall2"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BoundsWall3" type="Area2D" parent="Environment/Bounds"]
+position = Vector2(400, 0)
+scale = Vector2(1, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Bounds/BoundsWall3"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BoundsWall4" type="Area2D" parent="Environment/Bounds"]
+position = Vector2(-400, 0)
+scale = Vector2(1, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Bounds/BoundsWall4"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="Obstacles" type="Node2D" parent="Environment"]
+
+[node name="BlockingBox" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(-9, 0)
+rotation = 0.785398
+script = ExtResource("1_r0034")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox"]
+position = Vector2(-99.7021, 45.9619)
+rotation = 0.785398
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_xf54w")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox4" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(41, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox4"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox3" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(-25, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox3"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox2" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(24, -37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox2"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox5" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(-25, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox5"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox6" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(14, -83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox6"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox7" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(104, -86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox7"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox8" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(103, -49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox8"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox9" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(146, -49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox9"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox10" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(146, -90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox10"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox11" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(67, -128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox11"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox12" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(104, -128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox12"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingBox13" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(104, -128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingBox13"]
+shape = SubResource("RectangleShape2D_dchpq")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingCircle" type="Area2D" parent="Environment/Obstacles"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Obstacles/BlockingCircle"]
+position = Vector2(-67, -23)
+shape = SubResource("CircleShape2D_gulpr")
+debug_color = Color(0.956863, 0, 0.529412, 0.419608)
+
+[node name="BlockingTri" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(-185, 62)
+rotation = -0.456008
+scale = Vector2(6.68598, -9.75627)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Environment/Obstacles/BlockingTri"]
+polygon = PackedVector2Array(2.17, 0, -3.27, 0, 0, 15.955)
+
+[node name="BlockingTri2" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(151, 153)
+rotation = 0.427194
+scale = Vector2(19.1664, -5.42245)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Environment/Obstacles/BlockingTri2"]
+polygon = PackedVector2Array(2.17, 0, -3.27, 0, 0, 15.955)
+
+[node name="BlockingTri3" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(-134, -136)
+rotation = -1.09221
+scale = Vector2(19.1664, -5.42245)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Environment/Obstacles/BlockingTri3"]
+polygon = PackedVector2Array(2.17, 0, -3.27, 0, 0, 15.955)
+
+[node name="BlockingTri4" type="Area2D" parent="Environment/Obstacles"]
+position = Vector2(320, -143)
+rotation = -1.09221
+scale = Vector2(19.1664, -5.42245)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Environment/Obstacles/BlockingTri4"]
+polygon = PackedVector2Array(2.17, 0, -3.27, 0, 0, 15.955)
+
+[node name="RandomArea" type="Area2D" parent="Environment"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RandomArea"]
+scale = Vector2(39, 19)
+shape = SubResource("RectangleShape2D_0150l")
+debug_color = Color(0.403922, 0.607843, 0, 0.0117647)
+metadata/_edit_lock_ = true
